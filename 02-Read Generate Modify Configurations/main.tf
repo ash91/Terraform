@@ -12,15 +12,15 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_s3_bucket" "mydemos3" {
-  bucket = "my-tf-demo-test-bucket"
+# resource "aws_s3_bucket" "mydemos3" {
+#   bucket = "my-tf-demo-test-bucket"
 
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
-}
+#   tags = {
+#     Name        = "My bucket"
+#     Environment = "Dev"
+#   }
+# }
 
-output "mys3" {
-  value = aws_s3_bucket.mydemos3   
-}
+# output "mys3" {
+#   value = aws_s3_bucket.mydemos3   
+# }
