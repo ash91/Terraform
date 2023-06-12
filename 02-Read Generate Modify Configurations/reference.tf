@@ -35,6 +35,6 @@ resource "aws_security_group" "mydemosg" {
   }
 }
 
-output "myinstance" {
-  value = aws_instance.instance1.public_ip
-}
+# output "myinstance" {
+#   value = aws_instance.instance1.public_ip
+# }
