@@ -2,5 +2,5 @@
 # instancetype = "t2.micro"
 # ami_id = "ami-04a0ae173da5807d3"
 
-elb_name = "tf_elb"
+elb_name = "elb"
 az = [ "us-east-1a", "us-east-1b", "us-east-1c" ]

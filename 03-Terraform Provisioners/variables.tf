@@ -12,7 +12,7 @@
 
 variable "elb_name" {
   type = string
-  default = "tf_elb"
+  default = "elb"
 }
 
 variable "az" {
