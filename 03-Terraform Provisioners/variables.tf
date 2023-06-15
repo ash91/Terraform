@@ -10,10 +10,10 @@ variable "ami_id" {
   default = "ami-04a0ae173da5807d3"
 }
 
-# variable "elb_name" {
-#   type = string
-#   default = "elb"
-# }
+variable "elb_name" {
+  type    = list(any)
+  default = ["dev-instance", "prod-instance", "deploy-instance"]
+}
 
 # variable "az" {
 #   type = list
