@@ -10,12 +10,12 @@
 #   default = "ami-04a0ae173da5807d3"
 # }
 
-variable "elb_name" {
-  type = string
-  default = "elb"
-}
+# variable "elb_name" {
+#   type = string
+#   default = "elb"
+# }
 
-variable "az" {
-  type = list
-  default = ["us-east-1a", "us-east-1b", "us-east-1c"]
-}
+# variable "az" {
+#   type = list
+#   default = ["us-east-1a", "us-east-1b", "us-east-1c"]
+# }
