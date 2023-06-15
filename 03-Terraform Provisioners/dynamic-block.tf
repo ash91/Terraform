@@ -1,6 +1,6 @@
 variable "sg_ports" {
   type    = list(number)
-  default = [22, 80, 443, 8080]
+  default = [22, 80, 443]
 }
 
 resource "aws_security_group" "dynamicsg" {
