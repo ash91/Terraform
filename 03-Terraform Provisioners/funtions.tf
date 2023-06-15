@@ -2,9 +2,10 @@ locals {
   time = formatdate("DD MMM YYYY hh:mm ZZZ", timestamp())
 }
 
+
 resource "aws_key_pair" "loginkey" {
   key_name   = "login-key"
-  public_key = file("${path.module}/id_rsa.pub")
+  public_key = file("~/.ssh/id_rsa.pub")
 
 }
 
