@@ -4,8 +4,8 @@ resource "aws_security_group" "ec2-sg" {
 
   ingress {
     description = "Allow inbound from application"
-    from_port   = 8443
-    to_port     = 8443
+    from_port   = var.app_port
+    to_port     = var.app_port
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 
@@ -26,14 +26,12 @@ resource "aws_security_group" "ec2-sg" {
 
 
 resource "aws_security_group" "elbsg" {
-  name        = "my-elb-sg"
-  description = "Allow http inbound traffic"
-
+  name = "my-elb-sg"
 
   ingress {
     description = "Allow inbound from application"
-    from_port   = 8443
-    to_port     = 8443
+    from_port   = var.app_port
+    to_port     = var.app_port
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 
