@@ -4,8 +4,8 @@ resource "aws_security_group" "ec2-sg" {
 
   ingress {
     description = "Allow inbound from application"
-    from_port   = var.app_port
-    to_port     = var.app_port
+    from_port   = local.app_port
+    to_port     = local.app_port
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 
@@ -30,8 +30,8 @@ resource "aws_security_group" "elbsg" {
 
   ingress {
     description = "Allow inbound from application"
-    from_port   = var.app_port
-    to_port     = var.app_port
+    from_port   = local.app_port
+    to_port     = local.app_port
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
 
@@ -44,4 +44,9 @@ resource "aws_security_group" "elbsg" {
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
+}
+
+# by adding locals we ensure that user cannot changes prot accidentally/intentionally.
+locals {
+  app_port = 8080
 }
