@@ -50,3 +50,7 @@ resource "aws_security_group" "elbsg" {
 locals {
   app_port = 8080
 }
+
+output "sg_id" {
+  value = aws_security_group.ec2-sg.id
+}

@@ -1,3 +1,3 @@
-# variable "app_port" {
-#   default = "8443"
-# }
+variable "app_port" {
+  default = "8443"
+}
