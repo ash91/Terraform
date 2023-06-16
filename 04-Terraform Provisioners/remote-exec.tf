@@ -2,6 +2,10 @@ resource "aws_instance" "web" {
   ami           = "ami-04a0ae173da5807d3"
   instance_type = "t2.micro"
 
+  tags = {
+    Name = "tf-remote-exec"
+  }
+
   # Establishes connection to be used by all
   # generic remote provisioners (i.e. file/remote-exec)
   connection {
