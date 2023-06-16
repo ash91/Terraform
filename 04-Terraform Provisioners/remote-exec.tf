@@ -23,3 +23,7 @@ resource "aws_instance" "web" {
     ]
   }
 }
+
+output "tf-remote-exec" {
+  value = aws_instance.web.public_ip
+}
